@@ -32,7 +32,7 @@ public class SecurityConfig {
     private final JwtAuthFilter jwtAuthFilter;
     private final CustomUserDetailService customUserDetailService;
 
-    @Value("${frontend.url")// Fixed: Added closing brace '}' and default fallback value to port 5173
+    @Value("${frontend.url}")// Fixed: Added closing brace '}' and default fallback value to port 5173
     private  String frontendUrl;
 
 
@@ -69,7 +69,7 @@ public class SecurityConfig {
 
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
-
+        System.out.println("Allowed frontend URL: " + frontendUrl);
         CorsConfiguration configuration = new CorsConfiguration();
 
         configuration.setAllowedOrigins(List.of(frontendUrl));
