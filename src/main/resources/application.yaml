@@ -1,0 +1,36 @@
+
+spring:
+  application:
+    name: LibraryManagement
+
+  datasource:
+    url: ${DATASOURCE_URL}
+    username: ${DATASOURCE_USER}
+    password: ${DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  ai:
+    google:
+      genai:
+        api-key: ${GEMINI_API_KEY}
+        chat:
+          model: gemini-3.8-flash
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
+
+frontend:
+  url: ${FRONTEND_URL}
+
+jwt:
+  secretkey: ${JWT_SECRET}
+  expiration: 3600000
