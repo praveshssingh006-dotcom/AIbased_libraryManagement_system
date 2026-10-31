@@ -1,4 +1,4 @@
-# 📚 Library Management System
+# 📚 Library Management System -> [live](https://centrallibraryy.netlify.app)
 
 A Library Management System built using **Java, Spring Boot, Spring Security, JWT, PostgreSQL, and Google Gemini AI**. The application provides REST APIs for managing books, user authentication, and book issuing operations, along with AI-powered assistance.
 
